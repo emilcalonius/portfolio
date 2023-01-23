@@ -3,12 +3,6 @@ import portrait from "../assets/portrait.jpg";
 import github from "../assets/github.png";
 import gitlab from "../assets/gitlab.png";
 import linkedin from "../assets/linkedin.png";
-
-let hasScrolled = false;
-window.onscroll = function (e: WheelEvent) {
-    console.log("hi");
-    hasScrolled = true;
-}
 </script>
 
 <div class="introduction">
@@ -63,9 +57,6 @@ window.onscroll = function (e: WheelEvent) {
             </p>
         </div>
     </div>
-    {#if !hasScrolled}
-    <div class="arrow"></div>
-    {/if}
 </div>
 
 <style scoped>
@@ -120,6 +111,8 @@ window.onscroll = function (e: WheelEvent) {
     place-items: center;
     height: 100vh;
     padding: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .portrait-img {
@@ -176,25 +169,6 @@ p {
 
 .link {
     width: 2.5rem;
-}
-
-.arrow {
-  width: 0; 
-  height: 0; 
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 40px solid var(--ec-green-dark);
-  animation: bounce 2s linear infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(-20%);
-    }
-
-    50% {
-        transform: translateY(20%);
-    }
 }
 
 @media screen and (min-width: 1280px) {
