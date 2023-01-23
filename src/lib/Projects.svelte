@@ -121,7 +121,7 @@ import birdnest from "../assets/birdnest.png";
             <ul>
                 <li>TypeScript</li>
                 <li>VueJS</li>
-                <li>NodeJS 🐘</li>
+                <li>NodeJS</li>
             </ul>
             <br>
             <img src={birdnest} alt="birdnest" class="pc">
