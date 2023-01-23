@@ -51,7 +51,7 @@ import linkedin from "../assets/linkedin.png";
                 and practical web applications is my passion! 🔥
             </p>
             <p class="bio">
-                I like to keep up with new technologies and continually improving 
+                I like to keep up with new technologies and constantly improving 
                 my skills keeps me motivated. 
                 Take a look at my experience and projects below. ⬇️
             </p>

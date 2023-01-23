@@ -57,7 +57,7 @@ import birdnest from "../assets/birdnest.png";
             <h3 class="subtitle">Personal project</h3>
             <p class="description">
                 A website for building and managing your video game collection. Includes a REST API
-                build with Spring Boot and a front end made with Vue. Also has Meilisearch search
+                built with Spring Boot and a front end made with Vue. Also has Meilisearch search
                 engine database with over 60 000 video games published on Steam to search through
                 and add to your collection. App authentication and access-control is impemented in a
                 stateless manner with JWTs.
