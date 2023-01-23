@@ -49,9 +49,10 @@ const scrollToTop = () => {
   border-right: 40px solid transparent;
   border-top: 40px solid var(--ec-green-dark);
   animation: bounce 2s linear infinite;
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
-  left: 47vw;
+  left: 50%;
+  margin-left: -30px;
 }
 
 @keyframes bounce {

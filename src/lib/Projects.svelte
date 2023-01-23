@@ -12,14 +12,14 @@ import birdnest from "../assets/birdnest.png";
         <h1 class="title"># Projects</h1>
         <div class="splatter"></div>
         <div class="project">
-            <h1>Lumisovellus ❄️</h1>
+            <h1 class="name">Lumisovellus ❄️</h1>
             <h3 class="subtitle">School project</h3>
             <p class="description">
                 I was a frontend developer on the Lumisovellus-project.
                 The web app is used for recording snow
                 information in the Pallas area. Project was a part of
-                Tampere University's software engineering project -
-                course. The application is now maintained by
+                Tampere University's software engineering project -course. 
+                The application is now maintained by
                 Pallaksen Pöllöt and is actively used during the
                 winter season by people moving around the Pallas
                 fell area.
@@ -53,7 +53,7 @@ import birdnest from "../assets/birdnest.png";
         <br>
         <br>
         <div class="project">
-            <h1>Video game collection 🎮</h1>
+            <h1 class="name">Video game collection 🎮</h1>
             <h3 class="subtitle">Personal project</h3>
             <p class="description">
                 A website for building and managing your video game collection. Includes a REST API
@@ -93,7 +93,7 @@ import birdnest from "../assets/birdnest.png";
         <br>
         <br>
         <div class="project">
-            <h1>Drone radar 📡</h1>
+            <h1 class="name">Drone radar 📡</h1>
             <h3 class="subtitle">Personal project</h3>
             <p class="description">
                 Application for monitoring drone traffic near the nest of an endangered bird species 
@@ -171,10 +171,28 @@ h1, h3, p, li {
 }
 
 .pc {
-    max-width: 25rem;;
+    max-width: 25rem;
 }
 
 .snowledge {
     border-right: 1px solid black;
+}
+
+@media screen and (max-width: 500px) {
+    .pc {
+        max-width: 15rem;
+    }
+
+    .projects {
+        overflow: hidden;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }
 </style>

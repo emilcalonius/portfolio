@@ -101,7 +101,7 @@ import linkedin from "../assets/linkedin.png";
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    place-items: center;
+
 }
 
 .introduction {
@@ -132,6 +132,8 @@ import linkedin from "../assets/linkedin.png";
     justify-content: center;
     min-width: 22rem;
     min-height: 22rem;
+    max-width: 22rem;
+    max-height: 22rem;
     background-image: linear-gradient(90deg, 
         var(--ec-pink), var(--ec-green-dark), var(--ec-pink), var(--ec-green-dark));
     border-radius: 50%;
@@ -177,7 +179,7 @@ p {
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 500px) {
     .name {
         font-size: 3rem;
     }
@@ -215,6 +217,10 @@ p {
 
     .title {
         column-gap: 0.5rem;
+    }
+
+    .introduction {
+        justify-content: flex-start;
     }
 }
 </style>
