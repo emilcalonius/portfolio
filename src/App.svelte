@@ -2,19 +2,34 @@
   import Introduction from "./lib/Introduction.svelte";
   import Projects from "./lib/Projects.svelte";
   import { fade } from 'svelte/transition';
+  import { onMount } from 'svelte';
 
-let hasScrolled = false;
-window.onscroll = function (e: WheelEvent) {
-  if(window.pageYOffset > 0) {
-    hasScrolled = true;
-  } else {
-    hasScrolled = false;
+  let hasScrolled = false;
+  window.onscroll = function (e: WheelEvent) {
+    if(window.pageYOffset > 0) {
+      hasScrolled = true;
+    } else {
+      hasScrolled = false;
+    }
   }
-}
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-}
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      showArrow();
+    }, 900);
+  }
+
+  const showArrow = () => {
+    const introSection = document.querySelector(".introduction");
+    if(window.innerHeight >= 865) {
+      document.querySelector(".arrow").style.display = "block";
+    }
+  }
+
+  onMount(() => {
+    showArrow();
+  });
 </script>
 
 <Introduction />
@@ -36,6 +51,7 @@ const scrollToTop = () => {
   cursor: pointer;
   transition: all 0.5s ease 0s;
   border: 0;
+  z-index: 2;
 }
 
 .toTop:hover {
@@ -57,11 +73,15 @@ const scrollToTop = () => {
 
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(-20%);
+        transform: translateY(30%);
     }
 
     50% {
-        transform: translateY(20%);
+        transform: translateY(60%);
     }
+}
+
+.arrow {
+    display: none;
 }
 </style>

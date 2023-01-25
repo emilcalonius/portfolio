@@ -109,7 +109,7 @@ import linkedin from "../assets/linkedin.png";
     flex-direction: column;
     justify-content: space-around;
     place-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem;
     max-width: 1280px;
     margin: 0 auto;
@@ -194,17 +194,27 @@ p {
     .portrait,
     .portrait-border
     {
-        display: none;
+        
+    }
+
+    .profile {
+        align-items: center;
     }
 
     .portrait {
-        width: 10rem;
-        height: 10rem;
+        width: 12rem;
+        height: 12rem;
     }
 
     .portrait-border {
-        min-width: 11rem;
-        min-height: 11rem;
+        min-width: 13rem;
+        min-height: 13rem;
+        max-width: 13rem;
+        max-height: 13rem;
+    }
+
+    .portrait-img {
+        width: 12rem;
     }
 
     .name {
