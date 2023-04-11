@@ -1,10 +1,25 @@
 <script lang="ts">
-  import lumisovellusPc from "../assets/lumisovellus_pc.png";
-  import lumisovellusMobile from "../assets/lumisovellus_mobile.png";
-  import VGSearch from "../assets/vgcollection_search.png";
-  import VGLibrary from "../assets/vgcollection_library.png";
-  import VGGame from "../assets/vgcollection_game.png";
+  import snow1 from "../assets/snowledge_1.png";
+  import snow2 from "../assets/snowledge_2.png";
+  import snow3 from "../assets/snowledge_3.png";
+  import snow4 from "../assets/snowledge_4.png";
+  import snow5 from "../assets/snowledge_5.png";
+  import snow6 from "../assets/snowledge_6.png";
+
+  import vg1 from "../assets/vg_1.png";
+  import vg2 from "../assets/vg_2.png";
+  import vg3 from "../assets/vg_3.png";
+  import vg4 from "../assets/vg_4.png";
+  import vg5 from "../assets/vg_5.png";
+  import vg6 from "../assets/vg_6.png";
+
   import birdnest from "../assets/birdnest.png";
+  
+  import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+  import '@splidejs/svelte-splide/css';
+
+  const snow_images = [snow2, snow1, snow5, snow6, snow3, snow4];
+  const vg_images = [vg1, vg2, vg3, vg4, vg5, vg6];
 </script>
 
 <div class="projects">
@@ -44,12 +59,27 @@
         <li>MySQL 🐬</li>
       </ul>
       <br />
-      <img
-        src={lumisovellusMobile}
-        alt="lumisovellus-mobile"
-        class="mobile snowledge"
-      />
-      <img src={lumisovellusPc} alt="lumisovellus-pc" class="pc" />
+      <Splide
+        aria-label="Project Images"
+        options={{
+          width: '20rem',
+          height: '34rem',
+          perPage: 1,
+          type: 'fade',
+          lazyLoad: true
+
+        }}
+      >
+        {#each snow_images as imageUrl, index}
+        <SplideSlide>
+          <img
+            src={imageUrl}
+            alt={`Slide ${index+1}`}
+            class="image"
+          />
+        </SplideSlide>
+        {/each}
+      </Splide>
     </div>
     <br />
     <br />
@@ -88,9 +118,27 @@
         <li>PostgreSQL 🐘</li>
       </ul>
       <br />
-      <img src={VGSearch} alt="Video Game Collection search" class="mobile" />
-      <img src={VGLibrary} alt="Video Game Collection library" class="mobile" />
-      <img src={VGGame} alt="Video Game Collection game info" class="mobile" />
+      <Splide
+        aria-label="Project Images"
+        options={{
+          width: '20rem',
+          height: '36rem',
+          perPage: 1,
+          type: 'fade',
+          lazyLoad: true
+
+        }}
+      >
+        {#each vg_images as imageUrl, index}
+        <SplideSlide>
+          <img
+            src={imageUrl}
+            alt={`Slide ${index+1}`}
+            class="image"
+          />
+        </SplideSlide>
+        {/each}
+      </Splide>
     </div>
     <br />
     <br />
@@ -126,7 +174,7 @@
         <li>NodeJS</li>
       </ul>
       <br />
-      <img src={birdnest} alt="birdnest" class="pc" />
+      <img src={birdnest} alt="birdnest" class="image" />
     </div>
   </div>
 </div>
@@ -174,33 +222,22 @@
     z-index: 1;
   }
 
-  .mobile {
-    max-width: 15rem;
+  .image {
+    max-width: 20rem;
   }
 
-  .pc {
-    max-width: 25rem;
-  }
-
-  .snowledge {
-    border-right: 1px solid black;
+  @media screen and (min-width: 1000px) {
   }
 
   @media screen and (max-width: 500px) {
-    .pc {
-      max-width: 15rem;
-    }
-
-    .projects {
-      overflow: hidden;
-    }
-
-    .name {
-      font-size: 1.5rem;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-    }
+  .projects {
+    overflow: hidden;
   }
+  .name {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
 </style>
