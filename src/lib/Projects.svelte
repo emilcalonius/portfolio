@@ -13,13 +13,15 @@
   import vg5 from "../assets/vg_5.png";
   import vg6 from "../assets/vg_6.png";
 
-  import birdnest from "../assets/birdnest.png";
+  import birdnest1 from "../assets/birdnest_1.png";
+  import birdnest2 from "../assets/birdnest_2.png";
   
   import { Splide, SplideSlide } from '@splidejs/svelte-splide';
   import '@splidejs/svelte-splide/css';
 
   const snow_images = [snow2, snow1, snow5, snow6, snow3, snow4];
   const vg_images = [vg1, vg2, vg3, vg4, vg5, vg6];
+  const bird_images = [birdnest1, birdnest2];
 </script>
 
 <div class="projects">
@@ -27,46 +29,49 @@
     <h1 class="title"># Projects</h1>
     <div class="splatter" />
     <div class="project">
-      <h1 class="name">Lumisovellus ❄️</h1>
-      <h3 class="subtitle">School project</h3>
-      <p class="description">
-        I was a frontend developer on the Lumisovellus-project. The web app is
-        used for recording snow information in the Pallas area. Project was a
-        part of Tampere University's software engineering project -course. The
-        application is now maintained by Pallaksen Pöllöt and is actively used
-        during the winter season by people moving around the Pallas fell area.
+      <div class="info">
+        <h1 class="name">Lumisovellus ❄️</h1>
+        <h3 class="subtitle">School project</h3>
+        <p class="description">
+          I was a frontend developer on the Lumisovellus-project. The web app is
+          used for recording snow information in the Pallas area. Project was a
+          part of Tampere University's software engineering project -course. The
+          application is now maintained by Pallaksen Pöllöt and is actively used
+          during the winter season by people moving around the Pallas fell area.
+          <br />
+          <br />
+          Source code on
+          <a
+            href="https://github.com/oona988/snowledge"
+            target="_blank"
+            rel="noreferrer noopener">github.com/oona988/snowledge</a
+          >
+          <br />
+          Website hosted at
+          <a
+            href="https://lumisovellus.fi"
+            target="_blank"
+            rel="noreferrer noopener">lumisovellus.fi</a
+          >
+        </p>
+        <h3>Technologies</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>React ⚛️</li>
+          <li>NodeJS</li>
+          <li>MySQL 🐬</li>
+        </ul>
         <br />
-        <br />
-        Source code on
-        <a
-          href="https://github.com/oona988/snowledge"
-          target="_blank"
-          rel="noreferrer noopener">GitHub</a
-        >
-        <br />
-        Website hosted
-        <a
-          href="https://lumisovellus.fi"
-          target="_blank"
-          rel="noreferrer noopener">here</a
-        >
-      </p>
-      <h3>Technologies</h3>
-      <ul>
-        <li>JavaScript</li>
-        <li>React ⚛️</li>
-        <li>NodeJS</li>
-        <li>MySQL 🐬</li>
-      </ul>
-      <br />
+      </div>
       <Splide
         aria-label="Project Images"
         options={{
           width: '20rem',
-          height: '34rem',
+          height: '33.3rem',
           perPage: 1,
-          type: 'fade',
-          lazyLoad: true
+          type: 'slide',
+          lazyLoad: true,
+          wheel: true
 
         }}
       >
@@ -84,48 +89,51 @@
     <br />
     <br />
     <div class="project">
-      <h1 class="name">Video game collection 🎮</h1>
-      <h3 class="subtitle">Personal project</h3>
-      <p class="description">
-        A website for building and managing your video game collection. Includes
-        a REST API built with Spring Boot and a front end made with Vue. Also
-        has Meilisearch search engine database with over 60 000 video games
-        published on Steam to search through and add to your collection. App
-        authentication and access-control is impemented in a stateless manner
-        with JWTs.
+      <div class="info">
+        <h1 class="name">Video game collection 🎮</h1>
+        <h3 class="subtitle">Personal project</h3>
+        <p class="description">
+          A website for building and managing your video game collection. Includes
+          a REST API built with Spring Boot and a front end made with Vue. Also
+          has Meilisearch search engine database with over 60 000 video games
+          published on Steam to search through and add to your collection. App
+          authentication and access-control is impemented in a stateless manner
+          with JWTs.
+          <br />
+          <br />
+          Source code on
+          <a
+            href="https://github.com/emilcalonius/game-collection-frontend"
+            target="_blank"
+            rel="noreferrer noopener">github.com/emilcalonius/game-collection-frontend</a
+          >
+          <br />
+          Website hosted at
+          <a
+            href="https://calonius.me/game-collection-frontend"
+            target="_blank"
+            rel="noreferrer noopener">calonius.me/game-collection-frontend</a
+          >
+        </p>
+        <h3>Technologies</h3>
+        <ul>
+          <li>TypeScript</li>
+          <li>VueJS</li>
+          <li>Java ☕</li>
+          <li>Spring boot 🍃</li>
+          <li>PostgreSQL 🐘</li>
+        </ul>
         <br />
-        <br />
-        Source code on
-        <a
-          href="https://github.com/emilcalonius/game-collection-frontend"
-          target="_blank"
-          rel="noreferrer noopener">GitHub</a
-        >
-        <br />
-        Website hosted
-        <a
-          href="https://calonius.me/game-collection-frontend"
-          target="_blank"
-          rel="noreferrer noopener">here</a
-        >
-      </p>
-      <h3>Technologies</h3>
-      <ul>
-        <li>TypeScript</li>
-        <li>VueJS</li>
-        <li>Java ☕</li>
-        <li>Spring boot 🍃</li>
-        <li>PostgreSQL 🐘</li>
-      </ul>
-      <br />
+      </div>
       <Splide
         aria-label="Project Images"
         options={{
           width: '20rem',
           height: '36rem',
           perPage: 1,
-          type: 'fade',
-          lazyLoad: true
+          type: 'slide',
+          lazyLoad: true,
+          wheel: true
 
         }}
       >
@@ -143,38 +151,61 @@
     <br />
     <br />
     <div class="project">
-      <h1 class="name">Drone radar 📡</h1>
-      <h3 class="subtitle">Personal project</h3>
-      <p class="description">
-        Application for monitoring drone traffic near the nest of an endangered
-        bird species and keeping track of pilots violating the no drone zone
-        around the nest. Simulated drone positions are fetched from an external
-        API maintained by Reaktor. Violations are persisted in the backend for
-        10 minutes. Frontend developed using Vue and backend made with Node.
+      <div class="info">
+        <h1 class="name">Drone radar 📡</h1>
+        <h3 class="subtitle">Personal project</h3>
+        <p class="description">
+          Application for monitoring drone traffic near the nest of an endangered
+          bird species and keeping track of pilots violating the no drone zone
+          around the nest. Simulated drone positions are fetched from an external
+          API maintained by Reaktor. Violations are persisted in the backend for
+          10 minutes. Frontend developed using Vue and backend made with Node.
+          <br />
+          <br />
+          Source code on
+          <a
+            href="https://github.com/emilcalonius/birdnest"
+            target="_blank"
+            rel="noreferrer noopener">github.com/emilcalonius/birdnest</a
+          >
+          <br />
+          Website hosted at
+          <a
+            href="https://calonius.me/birdnest"
+            target="_blank"
+            rel="noreferrer noopener">calonius.me/birdnest</a
+          >
+        </p>
+        <h3>Technologies</h3>
+        <ul>
+          <li>TypeScript</li>
+          <li>VueJS</li>
+          <li>NodeJS</li>
+        </ul>
         <br />
-        <br />
-        Source code on
-        <a
-          href="https://github.com/emilcalonius/birdnest"
-          target="_blank"
-          rel="noreferrer noopener">GitHub</a
-        >
-        <br />
-        Website hosted
-        <a
-          href="https://calonius.me/birdnest"
-          target="_blank"
-          rel="noreferrer noopener">here</a
-        >
-      </p>
-      <h3>Technologies</h3>
-      <ul>
-        <li>TypeScript</li>
-        <li>VueJS</li>
-        <li>NodeJS</li>
-      </ul>
-      <br />
-      <img src={birdnest} alt="birdnest" class="image" />
+      </div>
+      <Splide
+        aria-label="Project Images"
+        options={{
+          width: '20rem',
+          height: '36rem',
+          perPage: 1,
+          type: 'slide',
+          lazyLoad: true,
+          wheel: true
+
+        }}
+      >
+        {#each bird_images as imageUrl, index}
+        <SplideSlide>
+          <img
+            src={imageUrl}
+            alt={`Slide ${index+1}`}
+            class="image"
+          />
+        </SplideSlide>
+        {/each}
+      </Splide>
     </div>
   </div>
 </div>
@@ -184,11 +215,11 @@
     min-height: 100vh;
     width: 100%;
     background-color: hsl(225, 15%, 95%);
-    padding: 2rem;
+    padding: 1rem;
+    overflow: hidden;
   }
 
   .projects-container {
-    padding: 2rem;
     max-width: 1280px;
     margin: 0 auto;
   }
@@ -223,21 +254,22 @@
   }
 
   .image {
-    max-width: 20rem;
+    width: 20rem;
   }
 
   @media screen and (min-width: 1000px) {
+    .project {
+      display: flex;
+      gap: 1rem;
+    }
   }
 
-  @media screen and (max-width: 500px) {
-  .projects {
-    overflow: hidden;
+  @media screen and (max-width: 600px) {
+    .name {
+      font-size: 1.5rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
   }
-  .name {
-    font-size: 1.5rem;
-  }
-  .subtitle {
-    font-size: 1rem;
-  }
-}
 </style>

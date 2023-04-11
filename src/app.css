@@ -35,3 +35,9 @@ body {
 #app {
   width: 100%;
 }
+
+.splide {
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 20rem;
+}

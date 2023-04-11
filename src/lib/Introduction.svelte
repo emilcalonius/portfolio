@@ -187,7 +187,7 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     .name {
       font-size: 3rem;
     }

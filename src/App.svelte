@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Experience from "./lib/Experience.svelte";
   import Introduction from "./lib/Introduction.svelte";
   import Projects from "./lib/Projects.svelte";
   import { fade } from "svelte/transition";
@@ -12,6 +13,7 @@
 
 <Introduction />
 <Projects />
+<Experience />
 {#if y == 0}
   <div class="arrow" out:fade in:fade />
 {/if}
