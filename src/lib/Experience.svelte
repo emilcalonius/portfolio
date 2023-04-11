@@ -1,6 +1,13 @@
-<script>
+<script lang="ts">
   import schoolIcon from '../assets/school.png';
   import workIcon from '../assets/work.png';
+
+  import { inview } from 'svelte-inview';
+  import { slide } from 'svelte/transition';
+
+  let inView1: boolean;
+  let inView2: boolean;
+  let inView3: boolean;
 </script>
 
 <div class="experience">
@@ -11,29 +18,53 @@
       <div class="line"></div>
     </div>
     <div class="timeline">
-      <div class="text-box left">
-        <div class="info">
+      <div 
+        class="text-box left" 
+        use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+        on:change={({ detail }) => {
+          inView1 = detail.inView;
+        }}
+      >
+        {#if inView1}
+        <div class="info" in:slide>
           <img class="icon" src={workIcon} alt="Work Icon">
           <h1 class="name">Sofia Digital Oy</h1>
           <h3 class="time">April 2023 - present</h3>
           <h2 class="job">Smart TV developer</h2>
         </div>
+        {/if}
       </div>
-      <div class="text-box right">
-        <div class="info">
+      <div 
+        class="text-box right"
+        use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+        on:change={({ detail }) => {
+          inView2 = detail.inView;
+        }}
+      >
+        {#if inView2}
+        <div class="info" in:slide>
           <img class="icon" src={workIcon} alt="Work Icon">
           <h1 class="name">Experis Academy Finland</h1>
           <h3 class="time">August 2022 - February 2023</h3>
           <h2 class="job">Java Full Stack Developer</h2>
         </div>
+        {/if}
       </div>
-      <div class="text-box left">
-        <div class="info">
+      <div 
+        class="text-box left"
+        use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+        on:change={({ detail }) => {
+          inView3 = detail.inView;
+        }}
+      >
+        {#if inView3}
+        <div class="info" in:slide>
           <img class="icon" src={schoolIcon} alt="School Icon">
           <h1 class="name">University of Tampere</h1>
           <h3 class="time">August 2018 - June 2022</h3>
           <h2 class="job">Bachelor of Science - Computer Science</h2>
         </div>
+        {/if}
       </div>
     </div>
   </div>

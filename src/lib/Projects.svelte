@@ -19,6 +19,13 @@
   import { Splide, SplideSlide } from '@splidejs/svelte-splide';
   import '@splidejs/svelte-splide/css';
 
+  import { inview } from 'svelte-inview';
+  import { fade } from 'svelte/transition';
+
+  let snowledgeInView: boolean;
+  let vgCollectionInView: boolean;
+  let birdnestInView: boolean;
+
   const snow_images = [snow2, snow1, snow5, snow6, snow3, snow4];
   const vg_images = [vg1, vg2, vg3, vg4, vg5, vg6];
   const bird_images = [birdnest1, birdnest2];
@@ -28,184 +35,214 @@
   <div class="projects-container">
     <h1 class="title"># Projects</h1>
     <div class="splatter" />
-    <div class="project">
-      <div class="info">
-        <h1 class="name">Lumisovellus ❄️</h1>
-        <h3 class="subtitle">School project</h3>
-        <p class="description">
-          I was a frontend developer on the Lumisovellus-project. The web app is
-          used for recording snow information in the Pallas area. Project was a
-          part of Tampere University's software engineering project -course. The
-          application is now maintained by Pallaksen Pöllöt and is actively used
-          during the winter season by people moving around the Pallas fell area.
+    <div
+      class="project-wrapper"
+      use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+      on:change={({ detail }) => {
+        snowledgeInView = detail.inView;
+      }}
+    >
+      {#if snowledgeInView}
+      <div class="project" in:fade>
+        <div class="info">
+          <h1 class="name">Lumisovellus ❄️</h1>
+          <h3 class="subtitle">School project</h3>
+          <p class="description">
+            I was a frontend developer on the Lumisovellus-project. The web app is
+            used for recording snow information in the Pallas area. Project was a
+            part of Tampere University's software engineering project -course. The
+            application is now maintained by Pallaksen Pöllöt and is actively used
+            during the winter season by people moving around the Pallas fell area.
+            <br />
+            <br />
+            Source code on
+            <a
+              href="https://github.com/oona988/snowledge"
+              target="_blank"
+              rel="noreferrer noopener">github.com/oona988/snowledge</a
+            >
+            <br />
+            Website hosted at
+            <a
+              href="https://lumisovellus.fi"
+              target="_blank"
+              rel="noreferrer noopener">lumisovellus.fi</a
+            >
+          </p>
+          <h3>Technologies</h3>
+          <ul>
+            <li>JavaScript</li>
+            <li>React ⚛️</li>
+            <li>NodeJS</li>
+            <li>MySQL 🐬</li>
+          </ul>
           <br />
-          <br />
-          Source code on
-          <a
-            href="https://github.com/oona988/snowledge"
-            target="_blank"
-            rel="noreferrer noopener">github.com/oona988/snowledge</a
-          >
-          <br />
-          Website hosted at
-          <a
-            href="https://lumisovellus.fi"
-            target="_blank"
-            rel="noreferrer noopener">lumisovellus.fi</a
-          >
-        </p>
-        <h3>Technologies</h3>
-        <ul>
-          <li>JavaScript</li>
-          <li>React ⚛️</li>
-          <li>NodeJS</li>
-          <li>MySQL 🐬</li>
-        </ul>
-        <br />
-      </div>
-      <Splide
-        aria-label="Project Images"
-        options={{
-          width: '20rem',
-          height: '33.3rem',
-          perPage: 1,
-          type: 'slide',
-          lazyLoad: true,
-          wheel: true
+        </div>
+        <Splide
+          aria-label="Project Images"
+          options={{
+            width: '20rem',
+            height: '33.3rem',
+            perPage: 1,
+            type: 'slide',
+            lazyLoad: true,
+            wheel: true
 
-        }}
-      >
-        {#each snow_images as imageUrl, index}
-        <SplideSlide>
-          <img
-            src={imageUrl}
-            alt={`Slide ${index+1}`}
-            class="image"
-          />
-        </SplideSlide>
-        {/each}
-      </Splide>
+          }}
+        >
+          {#each snow_images as imageUrl, index}
+          <SplideSlide>
+            <img
+              src={imageUrl}
+              alt={`Slide ${index+1}`}
+              class="image"
+            />
+          </SplideSlide>
+          {/each}
+        </Splide>
+      </div>
+      {/if}
     </div>
     <br />
     <br />
-    <div class="project">
-      <div class="info">
-        <h1 class="name">Video game collection 🎮</h1>
-        <h3 class="subtitle">Personal project</h3>
-        <p class="description">
-          A website for building and managing your video game collection. Includes
-          a REST API built with Spring Boot and a front end made with Vue. Also
-          has Meilisearch search engine database with over 60 000 video games
-          published on Steam to search through and add to your collection. App
-          authentication and access-control is impemented in a stateless manner
-          with JWTs.
+    <div
+      class="project-wrapper"
+      use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+      on:change={({ detail }) => {
+        vgCollectionInView = detail.inView;
+      }}
+    >
+      {#if vgCollectionInView}
+      <div class="project" in:fade>
+        <div class="info">
+          <h1 class="name">Video game collection 🎮</h1>
+          <h3 class="subtitle">Personal project</h3>
+          <p class="description">
+            A website for building and managing your video game collection. Includes
+            a REST API built with Spring Boot and a front end made with Vue. Also
+            has Meilisearch search engine database with over 60 000 video games
+            published on Steam to search through and add to your collection. App
+            authentication and access-control is impemented in a stateless manner
+            with JWTs.
+            <br />
+            <br />
+            Source code on
+            <a
+              href="https://github.com/emilcalonius/game-collection-frontend"
+              target="_blank"
+              rel="noreferrer noopener">github.com/emilcalonius/game-collection-frontend</a
+            >
+            <br />
+            Website hosted at
+            <a
+              href="https://calonius.me/game-collection-frontend"
+              target="_blank"
+              rel="noreferrer noopener">calonius.me/game-collection-frontend</a
+            >
+          </p>
+          <h3>Technologies</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>VueJS</li>
+            <li>Java ☕</li>
+            <li>Spring boot 🍃</li>
+            <li>PostgreSQL 🐘</li>
+          </ul>
           <br />
-          <br />
-          Source code on
-          <a
-            href="https://github.com/emilcalonius/game-collection-frontend"
-            target="_blank"
-            rel="noreferrer noopener">github.com/emilcalonius/game-collection-frontend</a
-          >
-          <br />
-          Website hosted at
-          <a
-            href="https://calonius.me/game-collection-frontend"
-            target="_blank"
-            rel="noreferrer noopener">calonius.me/game-collection-frontend</a
-          >
-        </p>
-        <h3>Technologies</h3>
-        <ul>
-          <li>TypeScript</li>
-          <li>VueJS</li>
-          <li>Java ☕</li>
-          <li>Spring boot 🍃</li>
-          <li>PostgreSQL 🐘</li>
-        </ul>
-        <br />
-      </div>
-      <Splide
-        aria-label="Project Images"
-        options={{
-          width: '20rem',
-          height: '36rem',
-          perPage: 1,
-          type: 'slide',
-          lazyLoad: true,
-          wheel: true
+        </div>
+        <Splide
+          aria-label="Project Images"
+          options={{
+            width: '20rem',
+            height: '36rem',
+            perPage: 1,
+            type: 'slide',
+            lazyLoad: true,
+            wheel: true
 
-        }}
-      >
-        {#each vg_images as imageUrl, index}
-        <SplideSlide>
-          <img
-            src={imageUrl}
-            alt={`Slide ${index+1}`}
-            class="image"
-          />
-        </SplideSlide>
-        {/each}
-      </Splide>
+          }}
+        >
+          {#each vg_images as imageUrl, index}
+          <SplideSlide>
+            <img
+              src={imageUrl}
+              alt={`Slide ${index+1}`}
+              class="image"
+            />
+          </SplideSlide>
+          {/each}
+        </Splide>
+      </div>
+      {/if}
     </div>
     <br />
     <br />
-    <div class="project">
-      <div class="info">
-        <h1 class="name">Drone radar 📡</h1>
-        <h3 class="subtitle">Personal project</h3>
-        <p class="description">
-          Application for monitoring drone traffic near the nest of an endangered
-          bird species and keeping track of pilots violating the no drone zone
-          around the nest. Simulated drone positions are fetched from an external
-          API maintained by Reaktor. Violations are persisted in the backend for
-          10 minutes. Frontend developed using Vue and backend made with Node.
+    <div
+      class="project-wrapper"
+      use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+      on:change={({ detail }) => {
+        birdnestInView = detail.inView;
+      }}
+    >
+      {#if birdnestInView}
+      <div class="project" in:fade>
+        <div class="info">
+          <h1 class="name">Drone radar 📡</h1>
+          <h3 class="subtitle">Personal project</h3>
+          <p class="description">
+            Application for monitoring drone traffic near the nest of an endangered
+            bird species and keeping track of pilots violating the no drone zone
+            around the nest. Simulated drone positions are fetched from an external
+            API maintained by Reaktor. Violations are persisted in the backend for
+            10 minutes. Frontend developed using Vue and backend made with Node.
+            <br />
+            <br />
+            Source code on
+            <a
+              href="https://github.com/emilcalonius/birdnest"
+              target="_blank"
+              rel="noreferrer noopener">github.com/emilcalonius/birdnest</a
+            >
+            <br />
+            Website hosted at
+            <a
+              href="https://calonius.me/birdnest"
+              target="_blank"
+              rel="noreferrer noopener">calonius.me/birdnest</a
+            >
+          </p>
+          <h3>Technologies</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>VueJS</li>
+            <li>NodeJS</li>
+          </ul>
           <br />
-          <br />
-          Source code on
-          <a
-            href="https://github.com/emilcalonius/birdnest"
-            target="_blank"
-            rel="noreferrer noopener">github.com/emilcalonius/birdnest</a
-          >
-          <br />
-          Website hosted at
-          <a
-            href="https://calonius.me/birdnest"
-            target="_blank"
-            rel="noreferrer noopener">calonius.me/birdnest</a
-          >
-        </p>
-        <h3>Technologies</h3>
-        <ul>
-          <li>TypeScript</li>
-          <li>VueJS</li>
-          <li>NodeJS</li>
-        </ul>
-        <br />
-      </div>
-      <Splide
-        aria-label="Project Images"
-        options={{
-          width: '20rem',
-          height: '36rem',
-          perPage: 1,
-          type: 'slide',
-          lazyLoad: true,
-          wheel: true
+        </div>
+        <Splide
+          aria-label="Project Images"
+          options={{
+            width: '20rem',
+            height: '36rem',
+            perPage: 1,
+            type: 'slide',
+            lazyLoad: true,
+            wheel: true
 
-        }}
-      >
-        {#each bird_images as imageUrl, index}
-        <SplideSlide>
-          <img
-            src={imageUrl}
-            alt={`Slide ${index+1}`}
-            class="image"
-          />
-        </SplideSlide>
-        {/each}
-      </Splide>
+          }}
+        >
+          {#each bird_images as imageUrl, index}
+          <SplideSlide>
+            <img
+              src={imageUrl}
+              alt={`Slide ${index+1}`}
+              class="image"
+            />
+          </SplideSlide>
+          {/each}
+        </Splide>
+      </div>
+      {/if}
     </div>
   </div>
 </div>
@@ -255,6 +292,10 @@
 
   .image {
     width: 20rem;
+  }
+
+  .project-wrapper {
+    min-height: 20rem;
   }
 
   @media screen and (min-width: 1000px) {
