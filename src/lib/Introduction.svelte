@@ -231,7 +231,7 @@
     }
 
     .introduction {
-      justify-content: flex-start;
+      justify-content: center;
     }
   }
 </style>
