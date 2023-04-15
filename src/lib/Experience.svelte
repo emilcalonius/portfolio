@@ -3,11 +3,13 @@
   import workIcon from '../assets/work.png';
 
   import { inview } from 'svelte-inview';
-  import { slide, fly } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
 
   let inView1: boolean;
   let inView2: boolean;
   let inView3: boolean;
+
+  let w: number;
 </script>
 
 <div class="experience">
@@ -28,7 +30,7 @@
         >
         <img class="icon" src={workIcon} alt="Work Icon">
           {#if inView1}
-          <div class="info" in:fly={{x: -500, duration: 400}}>
+          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 400}}>
             <h1 class="name">Sofia Digital Oy</h1>
             <h3 class="time">April 2023 - present</h3>
             <h2 class="job">Smart TV developer</h2>
@@ -66,7 +68,7 @@
         >
         <img class="icon" src={schoolIcon} alt="School Icon">
           {#if inView3}
-          <div class="info" in:fly={{x: -500, duration: 400}}>
+          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 400}}>
             <h1 class="name">University of Tampere</h1>
             <h3 class="time">August 2018 - June 2022</h3>
             <h2 class="job">Bachelor of Science - Computer Science</h2>
@@ -78,6 +80,8 @@
   </div>
 </div>
 
+<svelte:window bind:innerWidth={w} />
+
 <style scoped>
   .experience {
     padding: 1rem;
@@ -85,6 +89,7 @@
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 2rem;
   }
 
   .experience-container {
@@ -130,7 +135,7 @@
     content: '';
     position: absolute;
     width: 0.5rem;
-    height: 100%;
+    height: 95%;
     background: var(--ec-pink);
     top: 2rem;
     left: 50%;
@@ -148,6 +153,7 @@
 
   .info-wrapper {
     width: 80%;
+    max-width: 60vw;
   }
 
   .text-box {
@@ -192,7 +198,7 @@
     left: -2.5rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
     .title {
       font-size: 2.5rem;
     }

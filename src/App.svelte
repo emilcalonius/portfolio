@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Contact from "./lib/Contact.svelte";
   import Experience from "./lib/Experience.svelte";
   import Introduction from "./lib/Introduction.svelte";
   import Projects from "./lib/Projects.svelte";
@@ -14,6 +15,7 @@
 <Introduction />
 <Projects />
 <Experience />
+<Contact />
 {#if y == 0}
   <div class="arrow" out:fade in:fade />
 {/if}
