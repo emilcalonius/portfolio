@@ -87,7 +87,6 @@
             type: 'slide',
             lazyLoad: true,
             wheel: true
-
           }}
         >
           {#each snow_images as imageUrl, index}
@@ -159,7 +158,6 @@
             type: 'slide',
             lazyLoad: true,
             wheel: true
-
           }}
         >
           {#each vg_images as imageUrl, index}
@@ -228,7 +226,6 @@
             type: 'slide',
             lazyLoad: true,
             wheel: true
-
           }}
         >
           {#each bird_images as imageUrl, index}
