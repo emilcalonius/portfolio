@@ -30,7 +30,7 @@
         >
         <img class="icon" src={workIcon} alt="Work Icon">
           {#if inView1}
-          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 400}}>
+          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 500}}>
             <h1 class="name">Sofia Digital Oy</h1>
             <h3 class="time">April 2023 - present</h3>
             <h2 class="job">Smart TV developer</h2>
@@ -49,10 +49,16 @@
         >
         <img class="icon" src={workIcon} alt="Work Icon">
           {#if inView2}
-          <div class="info" in:fly={{x: 500, duration: 400}}>
+          <div class="info" in:fly={{x: 500, duration: 500}}>
             <h1 class="name">Experis Academy Finland</h1>
             <h3 class="time">August 2022 - February 2023</h3>
             <h2 class="job">Java Full Stack Developer</h2>
+            <p class="description">
+              The Experis Academy program consists of two stages. 
+              First a three-month accelerated learning period focusing on
+              backend development with Java and frontend development with modern JavaScript frameworks.
+              After the learning period work continues as a software development consultant with Experis.
+            </p>
           </div>
           {/if}
         </div>
@@ -68,7 +74,7 @@
         >
         <img class="icon" src={schoolIcon} alt="School Icon">
           {#if inView3}
-          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 400}}>
+          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 500}}>
             <h1 class="name">University of Tampere</h1>
             <h3 class="time">August 2018 - June 2022</h3>
             <h2 class="job">Bachelor of Science - Computer Science</h2>
@@ -146,7 +152,7 @@
 
   .info {
     background: hsl(225, 15%, 95%);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     width: 100%;
   }
@@ -168,7 +174,7 @@
     position: relative;
   }
 
-  .text-box h1, h2, h3 {
+  .text-box h1, h2, h3, p {
     display: flex;
     justify-content: center;
   }
