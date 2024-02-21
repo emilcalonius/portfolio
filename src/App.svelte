@@ -1,20 +1,20 @@
 <script lang="ts">
-  import Contact from "./lib/Contact.svelte";
-  import Experience from "./lib/Experience.svelte";
-  import Introduction from "./lib/Introduction.svelte";
-  import Projects from "./lib/Projects.svelte";
-  import { fade } from "svelte/transition";
+  import Contact from './lib/Contact.svelte'
+  import Experience from './lib/Experience.svelte'
+  import Introduction from './lib/Introduction.svelte'
+  import Projects from './lib/Projects.svelte'
+  import { fade } from 'svelte/transition'
 
-  let y: number;
+  let y: number
 
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+    window.scrollTo(0, 0)
+  }
 </script>
 
 <Introduction />
-<Projects />
 <Experience />
+<Projects />
 <Contact />
 {#if y == 0}
   <div class="arrow" out:fade in:fade />

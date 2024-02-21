@@ -1,15 +1,15 @@
 <script lang="ts">
-  import schoolIcon from '../assets/school.png';
-  import workIcon from '../assets/work.png';
+  import schoolIcon from '../assets/school.png'
+  import workIcon from '../assets/work.png'
 
-  import { inview } from 'svelte-inview';
-  import { fly } from 'svelte/transition';
+  import { inview } from 'svelte-inview'
+  import { fly } from 'svelte/transition'
 
-  let inView1: boolean;
-  let inView2: boolean;
-  let inView3: boolean;
+  let inView1: boolean
+  let inView2: boolean
+  let inView3: boolean
 
-  let w: number;
+  let w: number
 </script>
 
 <div class="experience">
@@ -20,65 +20,70 @@
       <div class="line"></div>
     </div>
     <div class="timeline">
-      <div class="text-box left" >
-        <div 
+      <div class="text-box left">
+        <div
           class="info-wrapper"
           use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
           on:change={({ detail }) => {
-            inView1 = detail.inView;
+            inView1 = detail.inView
           }}
         >
-        <img class="icon" src={workIcon} alt="Work Icon">
+          <img class="icon" src={workIcon} alt="Work Icon" />
           {#if inView1}
-          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 500}}>
-            <h1 class="name">Sofia Digital Oy</h1>
-            <h3 class="time">April 2023 - present</h3>
-            <h2 class="job">Smart TV developer</h2>
-          </div>
+            <div
+              class="info"
+              in:fly={{ x: w > 1000 ? -500 : 500, duration: 500 }}
+            >
+              <h1 class="name">Sofia Digital Oy</h1>
+              <h3 class="time">April 2023 - present</h3>
+              <h2 class="job">Smart TV developer</h2>
+            </div>
           {/if}
         </div>
       </div>
-      <div 
-        class="text-box right">
-        <div 
+      <div class="text-box right">
+        <div
           class="info-wrapper"
           use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
           on:change={({ detail }) => {
-            inView2 = detail.inView;
+            inView2 = detail.inView
           }}
         >
-        <img class="icon" src={workIcon} alt="Work Icon">
+          <img class="icon" src={workIcon} alt="Work Icon" />
           {#if inView2}
-          <div class="info" in:fly={{x: 500, duration: 500}}>
-            <h1 class="name">Experis Academy Finland</h1>
-            <h3 class="time">August 2022 - February 2023</h3>
-            <h2 class="job">Java Full Stack Developer</h2>
-            <p class="description">
-              The Experis Academy program consists of two stages. 
-              First a three-month accelerated learning period focusing on
-              backend development with Java and frontend development with modern JavaScript frameworks.
-              After the learning period work continues as a software development consultant with Experis.
-            </p>
-          </div>
+            <div class="info" in:fly={{ x: 500, duration: 500 }}>
+              <h1 class="name">Experis Academy Finland</h1>
+              <h3 class="time">August 2022 - February 2023</h3>
+              <h2 class="job">Java Full Stack Developer</h2>
+              <p class="description">
+                The Experis Academy program consists of two stages. First a
+                three-month accelerated learning period focusing on backend
+                development with Java and frontend development with modern
+                JavaScript frameworks. After the learning period work continues
+                as a software development consultant with Experis.
+              </p>
+            </div>
           {/if}
         </div>
       </div>
-      <div 
-        class="text-box left">
-        <div 
+      <div class="text-box left">
+        <div
           class="info-wrapper"
           use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
           on:change={({ detail }) => {
-            inView3 = detail.inView;
+            inView3 = detail.inView
           }}
         >
-        <img class="icon" src={schoolIcon} alt="School Icon">
+          <img class="icon" src={schoolIcon} alt="School Icon" />
           {#if inView3}
-          <div class="info" in:fly={{x: w > 1000 ? -500 : 500, duration: 500}}>
-            <h1 class="name">University of Tampere</h1>
-            <h3 class="time">August 2018 - June 2022</h3>
-            <h2 class="job">Bachelor of Science - Computer Science</h2>
-          </div>
+            <div
+              class="info"
+              in:fly={{ x: w > 1000 ? -500 : 500, duration: 500 }}
+            >
+              <h1 class="name">University of Tampere</h1>
+              <h3 class="time">August 2018 - June 2022</h3>
+              <h2 class="job">Bachelor of Science - Computer Science</h2>
+            </div>
           {/if}
         </div>
       </div>
@@ -111,7 +116,13 @@
     position: relative;
     z-index: 1;
     color: #242424;
-    background: linear-gradient(-90deg, var(--ec-green-dark), var(--ec-pink), var(--ec-green-dark), var(--ec-pink));
+    background: linear-gradient(
+      -90deg,
+      var(--ec-green-dark),
+      var(--ec-pink),
+      var(--ec-green-dark),
+      var(--ec-pink)
+    );
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     padding: 2rem;
@@ -121,10 +132,16 @@
   }
 
   .line {
-    height: .5rem;
+    height: 0.5rem;
     width: 250%;
     transform: translateX(-25%);
-    background: linear-gradient(-90deg, var(--ec-green-dark), var(--ec-pink), var(--ec-green-dark), var(--ec-pink));
+    background: linear-gradient(
+      -90deg,
+      var(--ec-green-dark),
+      var(--ec-pink),
+      var(--ec-green-dark),
+      var(--ec-pink)
+    );
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
   }
@@ -134,7 +151,7 @@
     position: relative;
     flex-direction: column;
     padding: 2rem;
-    width: 100%
+    width: 100%;
   }
 
   .timeline::after {
@@ -174,7 +191,10 @@
     position: relative;
   }
 
-  .text-box h1, h2, h3, p {
+  .text-box h1,
+  h2,
+  h3,
+  p {
     display: flex;
     justify-content: center;
   }

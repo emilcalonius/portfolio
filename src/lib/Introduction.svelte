@@ -1,8 +1,8 @@
 <script lang="ts">
-  import portrait from "../assets/portrait.jpg";
-  import github from "../assets/github.png";
-  import gitlab from "../assets/gitlab.png";
-  import linkedin from "../assets/linkedin.png";
+  import portrait from '../assets/portrait.jpg'
+  import github from '../assets/github.png'
+  import gitlab from '../assets/gitlab.png'
+  import linkedin from '../assets/linkedin.png'
 </script>
 
 <div class="introduction">

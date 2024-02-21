@@ -1,6 +1,6 @@
 <script lang="ts">
-  import email from "../assets/email.png";
-  import linkedin from "../assets/linkedin.png";
+  import email from '../assets/email.png'
+  import linkedin from '../assets/linkedin.png'
 </script>
 
 <div class="contact">
@@ -14,7 +14,7 @@
       >
         <img class="link" src={linkedin} alt="LinkedIn" />
       </a>
-      <a href = "mailto: emil.calonius@gmail.com">
+      <a href="mailto: emil.calonius@gmail.com">
         <img class="link" src={email} alt="Email" />
       </a>
     </div>
