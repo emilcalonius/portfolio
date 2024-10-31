@@ -2,4 +2,4 @@
 
 Personal portfolio site developed using Svelte.
 
-Link to website: https://calonius.me
+Link to website: https://calonius.dev
