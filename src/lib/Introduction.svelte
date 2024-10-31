@@ -9,7 +9,11 @@
   <div class="profile">
     <div class="portrait-border">
       <div class="portrait">
-        <img class="portrait-img" src={portrait} alt="portrait" />
+        <img
+          class="portrait-img"
+          src={portrait}
+          alt="portrait"
+        />
       </div>
     </div>
     <div class="text-container">
@@ -27,32 +31,44 @@
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img class="link" src={github} alt="GitHub" />
+          <img
+            class="link"
+            src={github}
+            alt="GitHub"
+          />
         </a>
         <a
           href="https://gitlab.com/emilcalonius"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img class="link" src={gitlab} alt="GitLab" />
+          <img
+            class="link"
+            src={gitlab}
+            alt="GitLab"
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/emilcalonius/"
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img class="link" src={linkedin} alt="LinkedIn" />
+          <img
+            class="link"
+            src={linkedin}
+            alt="LinkedIn"
+          />
         </a>
       </div>
       <p class="bio">
-        I am an aspiring web developer, who loves problem solving and seeing the
-        work I do affect peoples lives positively. Making modern, responsive and
-        practical web applications is my passion! 🔥
+        I am a result-oriented full stack developer, who loves problem solving
+        and seeing the work I do affect peoples lives positively. Making modern,
+        responsive and practical web applications is my passion! 🔥
       </p>
       <p class="bio">
         I like to keep up with new technologies and constantly improving my
-        skills keeps me motivated. Take a look at my experience and projects
-        below. ⬇️
+        skills keeps me motivated. Take a look at my work experience and
+        school/personal projects below. ⬇️
       </p>
     </div>
   </div>

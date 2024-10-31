@@ -43,10 +43,13 @@
       }}
     >
       {#if snowledgeInView}
-        <div class="project" in:fade>
+        <div
+          class="project"
+          in:fade
+        >
           <div class="info">
             <h1 class="name">Lumisovellus ❄️</h1>
-            <h3 class="subtitle">School project</h3>
+            <h3 class="subtitle">School project | Autumn 2021</h3>
             <p class="description">
               I was a frontend developer on the Lumisovellus-project. The web
               app is used for recording snow information in the Pallas area.
@@ -92,7 +95,11 @@
           >
             {#each snow_images as imageUrl, index}
               <SplideSlide>
-                <img src={imageUrl} alt={`Slide ${index + 1}`} class="image" />
+                <img
+                  src={imageUrl}
+                  alt={`Slide ${index + 1}`}
+                  class="image"
+                />
               </SplideSlide>
             {/each}
           </Splide>
@@ -109,10 +116,13 @@
       }}
     >
       {#if vgCollectionInView}
-        <div class="project" in:fade>
+        <div
+          class="project"
+          in:fade
+        >
           <div class="info">
             <h1 class="name">Video game collection 🎮</h1>
-            <h3 class="subtitle">Personal project</h3>
+            <h3 class="subtitle">Personal project | 2022</h3>
             <p class="description">
               A website for building and managing your video game collection.
               Includes a REST API built with Spring Boot and a front end made
@@ -128,14 +138,6 @@
                 target="_blank"
                 rel="noreferrer noopener"
                 >github.com/emilcalonius/game-collection-frontend</a
-              >
-              <br />
-              Website hosted at
-              <a
-                href="https://calonius.me/game-collection-frontend"
-                target="_blank"
-                rel="noreferrer noopener"
-                >calonius.me/game-collection-frontend</a
               >
             </p>
             <h3>Technologies</h3>
@@ -161,7 +163,11 @@
           >
             {#each vg_images as imageUrl, index}
               <SplideSlide>
-                <img src={imageUrl} alt={`Slide ${index + 1}`} class="image" />
+                <img
+                  src={imageUrl}
+                  alt={`Slide ${index + 1}`}
+                  class="image"
+                />
               </SplideSlide>
             {/each}
           </Splide>
@@ -178,10 +184,13 @@
       }}
     >
       {#if birdnestInView}
-        <div class="project" in:fade>
+        <div
+          class="project"
+          in:fade
+        >
           <div class="info">
             <h1 class="name">Drone radar 📡</h1>
-            <h3 class="subtitle">Personal project</h3>
+            <h3 class="subtitle">Personal project | 2022</h3>
             <p class="description">
               Application for monitoring drone traffic near the nest of an
               endangered bird species and keeping track of pilots violating the
@@ -196,13 +205,6 @@
                 href="https://github.com/emilcalonius/birdnest"
                 target="_blank"
                 rel="noreferrer noopener">github.com/emilcalonius/birdnest</a
-              >
-              <br />
-              Website hosted at
-              <a
-                href="https://calonius.me/birdnest"
-                target="_blank"
-                rel="noreferrer noopener">calonius.me/birdnest</a
               >
             </p>
             <h3>Technologies</h3>
@@ -226,7 +228,11 @@
           >
             {#each bird_images as imageUrl, index}
               <SplideSlide>
-                <img src={imageUrl} alt={`Slide ${index + 1}`} class="image" />
+                <img
+                  src={imageUrl}
+                  alt={`Slide ${index + 1}`}
+                  class="image"
+                />
               </SplideSlide>
             {/each}
           </Splide>
