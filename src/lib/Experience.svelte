@@ -28,7 +28,11 @@
             inView1 = detail.inView
           }}
         >
-          <img class="icon" src={workIcon} alt="Work Icon" />
+          <img
+            class="icon"
+            src={workIcon}
+            alt="Work Icon"
+          />
           {#if inView1}
             <div
               class="info"
@@ -37,6 +41,13 @@
               <h1 class="name">Sofia Digital Oy</h1>
               <h3 class="time">April 2023 - present</h3>
               <h2 class="job">Smart TV developer</h2>
+              <ul class="description">
+                <li>Smart TV application development with Vue</li>
+                <li>
+                  Full stack web/mobile application development with React
+                  Native, Node.js, AWS
+                </li>
+              </ul>
             </div>
           {/if}
         </div>
@@ -49,9 +60,16 @@
             inView2 = detail.inView
           }}
         >
-          <img class="icon" src={workIcon} alt="Work Icon" />
+          <img
+            class="icon"
+            src={workIcon}
+            alt="Work Icon"
+          />
           {#if inView2}
-            <div class="info" in:fly={{ x: 500, duration: 500 }}>
+            <div
+              class="info"
+              in:fly={{ x: 500, duration: 500 }}
+            >
               <h1 class="name">Experis Academy Finland</h1>
               <h3 class="time">August 2022 - February 2023</h3>
               <h2 class="job">Java Full Stack Developer</h2>
@@ -74,7 +92,11 @@
             inView3 = detail.inView
           }}
         >
-          <img class="icon" src={schoolIcon} alt="School Icon" />
+          <img
+            class="icon"
+            src={schoolIcon}
+            alt="School Icon"
+          />
           {#if inView3}
             <div
               class="info"
