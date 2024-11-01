@@ -1,5 +1,5 @@
 <script lang="ts">
-  import portrait from '../assets/portrait.jpg'
+  import portrait from '../assets/portrait.png'
   import github from '../assets/github.png'
   import gitlab from '../assets/gitlab.png'
   import linkedin from '../assets/linkedin.png'
